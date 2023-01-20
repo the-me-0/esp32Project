@@ -26,7 +26,13 @@ cd ~/esp/esp-idf
 * That's it !
 
 # Using IDF in a project
-* 
+* You can flash (the flash command build, then flashes) your project using the command : `idf.py -p <your_port> flash`
+* You can monitor your project using : `idf.py -p <your_port> monitor` then leave using **Ctrl+]** (your project need to be flashed first)
+* You can use idf inside **VS Code** by adding the extension *Espressif IDF* and setting up the [extension](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md).
+
+## IDF in command lines
+* `. $HOME/esp/esp-idf/export.sh`
+* `cp -r $IDF_PATH/examples/get-started/hello_world .` *this line copy a project so you can just modify it as a template*
 
 ## Common problems
 * How to get the port of the esp32 connected to your PC/laptop ?

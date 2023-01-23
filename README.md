@@ -29,10 +29,15 @@ cd ~/esp/esp-idf
 * You can flash (the flash command build, then flashes) your project using the command : `idf.py -p <your_port> flash`
 * You can monitor your project using : `idf.py -p <your_port> monitor` then leave using **Ctrl+]** (your project need to be flashed first)
 * You can use idf inside **VS Code** by adding the extension *Espressif IDF* and setting up the [extension](https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/tutorial/install.md).
+* You can try this example project to blink the integrated led : https://github.com/espressif/esp-idf/tree/master/examples/get-started/blink
 
 ## IDF in command lines
 * `. $HOME/esp/esp-idf/export.sh`
-* `cp -r $IDF_PATH/examples/get-started/hello_world .` *this line copy a project so you can just modify it as a template*
+* `idf.py create-project` *this line creates an empty project*
+* `idf.py set-target <your-target>` *target can be esp32, esp32s2...*
+* `idf.py -p <your port> build` *builds the project*
+* `idf.py -p <your port> flash` *build & flash the project on the esp*
+* `idf.py -p <your port> flash monitor` *build & flash & monitor the project, viewing what the esp code returns in a terminal*
 
 ## Common problems
 * How to get the port of the esp32 connected to your PC/laptop ?
